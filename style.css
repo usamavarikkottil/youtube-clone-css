@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #202020;
+}
+
+.main-nav .left-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.left-menu .material-icons {
+  margin-right: 20px;
+  font-size: 30px;
+}
+.left-menu img {
+  width: 75px;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  margin: 10px 10%;
+}
+
+.search-container > input {
+  background: #121212;
+  border: 0;
+  padding: 5px 10px;
+  color: #fff;
+  flex: 1;
+}
+
+.search-container > input:focus {
+  outline: 1px solid #1c62b9;
+}
+
+.search-container > .material-icons {
+  background: #313131;
+  color: #8b8b8b;
+  font-size: 1.3rem;
+  padding: 5px 15px;
+  outline: 1px solid #313131;
+}
+
+.main-nav .right-menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 20px;
+}
+
+.right-menu .material-icons {
+  margin-right: 20px;
+  font-size: 25px;
+}
+.right-menu .material-icons:first-child {
+  display: none;
+}
+
+/* Container for slidebar and home videos section */
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Starting Left Slidebar  */
+.slidebar-left {
+  /* display: flex;
+  flex-direction: column; */
+  width: 240px;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #212121;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #212121;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+
+  /* border: 10px solid white; */
+  /* border-radius: 5px;  */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4a;
+}
+
+.slidebar-left > div {
+  border-bottom: 1.2px solid #383838;
+}
+
+.slidebar-left > div > a > h4 {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.slidebar-left > div > a > h4 > .material-icons {
+  margin-right: 15px;
+  color: #909090;
+}
+
+.slidebar-left > div > h3 {
+  padding: 8px 12px 0px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #909090;
+  text-transform: uppercase;
+}
+
+.slidebar-left > .subscriptions > a > h4 > img {
+  margin-right: 15px;
+  border-radius: 100%;
+  width: 30px;
+}
+
+/* Starting Left Slidebar  */
+.home-videos {
+  height: 100vh;
+  overflow-y: scroll;
+  background: #212121;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  flex: 1;
+}
+
+.home-videos > div {
+  width: 240px;
+  margin-bottom: 20px;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.home-videos > div > img {
+  width: 240px;
+}
+
+.home-videos > div > .video {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5px;
+}
+
+.home-videos > div > .video > img {
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.home-videos > div > .video > .details > p {
+  color: #919191;
+}
+
+.home-videos > div > .video > .details > h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .main-nav .left-menu {
+    padding: 0px;
+  }
+  .search-container {
+    display: none;
+  }
+  .right-menu .material-icons:first-child {
+    display: inline;
+  }
+}
+
+@media (max-width: 750px) {
+  .search-container {
+    flex: 0;
+    margin: 10px 2%;
+  }
+}
